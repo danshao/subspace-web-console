@@ -1,0 +1,91 @@
+/* =============================
+ *  Vendor - FullCalendar
+================================ */
+
+.fc-unthemed {
+    .fc-content,
+    .fc-divider,
+    .fc-list-heading td,
+    .fc-list-view,
+    .fc-popover,
+    .fc-row,
+    tbody,
+    td,
+    th,
+    thead {
+        border-color: $fc-table-border-color;
+    }
+
+    td.fc-today {
+        background: $fc-today-bg;
+    }
+
+    .fc-divider,
+    .fc-list-heading td,
+    .fc-popover .fc-header {
+        background: $fc-list-heading-bg;
+    }
+
+    .fc-list-empty {
+        /* theme will provide own background */
+        background-color: $fc-today-bg;
+    }
+
+    button {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.fc-list-item {
+    &:hover td {
+        background: $fc-list-item-hover;
+    }
+}
+
+.fc-event {
+    border-color: $fc-event-border-color;
+
+    .fc-bg {
+        background: $fc-event-bg;
+    }
+}
+
+.fc-content {
+    padding: 0.5em 0.5em 0.3em;
+}
+
+.fc-event,
+.fc-event-dot {
+    background-color: $fc-event-dot-color;
+}
+
+.fc-highlight{
+	background-color: $fc-highlight-bg;
+}
+
+// button
+.fc-state-default {
+    background : $fc-btn-default;
+    color      : $fc-btn-default-color;
+    text-shadow: none;
+    box-shadow : none;
+
+    &.fc-state-hover {
+        background: lighten($fc-btn-default, 3%);
+    }
+
+    &.fc-state-active,
+    &.fc-state-down {
+        background: darken($fc-btn-default, 3%);
+    }
+
+    &.fc-state-disabled {
+        border    : solid 1px rgba($fc-btn-default, .5);
+        color     : $fc-btn-default;
+        background: transparent;
+        opacity   : 0.5;
+        cursor    : default;
+    }
+}

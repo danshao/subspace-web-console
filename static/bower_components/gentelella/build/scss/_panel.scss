@@ -1,0 +1,142 @@
+/* =============================
+ * Panel
+================================ */
+.panel_toolbox {
+    float    : right;
+    min-width: 70px;
+
+    > li {
+        float : left;
+        cursor: pointer;
+
+        > a {
+            color        : $panel-toolbox-link;
+            border-radius: $border-radius-sm;
+            padding      : 8px 5px 4px;
+            min-width    : 32px;
+            text-align   : center;
+            // .ion{
+            //     width: 18px;
+            //     height: 18px;
+            //     font-size: 18px;
+            // }
+        }
+    }
+}
+.x_panel {
+    display                    : inline-block;
+    position                   : relative;
+    width                      : 100%;
+    background                 : $panel-bg;
+    margin-bottom              : $panel-margin-bottom;
+    padding                    : 0;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside   : avoid;
+    column-break-inside        : avoid;
+    opacity                    : 1;
+    background-clip: padding-box;
+    border-radius: $panel-border-radius;
+    @include transition( all 0.2s ease);
+    // @media (max-width: 480px) {
+    //     padding: $panel-padding-sm;
+    // }
+}
+.x_title {
+    background: $panel-title-bg;
+    border-bottom: $panel-title-border;
+    padding      : ($panel-padding-horizontal - 6) ($panel-padding-horizontal - 6) ($panel-padding-horizontal - 10) $panel-padding-horizontal;
+    margin: 0;
+    border-radius: $panel-border-radius $panel-border-radius 0 0;
+
+    h2 {
+        font-size    : 1.25rem;
+        color: $panel-title-color;
+        margin       : 5px 0 6px;
+        float        : left;
+        display      : block;
+        text-overflow: ellipsis;
+        overflow     : hidden;
+        white-space  : nowrap;
+
+        small {
+            margin-left: 4px;
+            @media (max-width: 1270px) and (min-width: 192px) {
+                display: none;
+            }
+        }
+        @media (max-width: 1200px) {
+            width    : 62%;
+            font-size: 1.125rem;
+        }
+    }
+
+    .filter {
+        width: 40%;
+        float: right;
+    }
+    //== clearfix
+    &::after{
+        display: block;
+        content: '';
+        clear  : both;
+    }
+
+}
+.x_content {
+    padding   : $panel-padding-vertical $panel-padding-horizontal;
+    position  : relative;
+    width     : 100%;
+    float     : left;
+    clear     : both;
+}
+
+/* =============================
+ * Bootstrap Panel
+================================ */
+.panel {
+    border-radius: $panel-border-radius;
+    background   : $bs-panel-bg;
+}
+
+.panel-heading {
+    display   : block;
+    background: $bs-panel-heading-bg;
+    padding   : $bs-panel-heading-padding;
+}
+
+.panel-footer {
+    border-top-color: $bs-panel-footer-border-color;
+    background      : $bs-panel-footer-bg;
+}
+
+a.panel-heading {
+    text-decoration: none;
+
+    &:hover {
+        background: $bs-panel-heading-hover-bg;
+    }
+}
+
+
+.panel-group {
+    margin-bottom: 0;
+    .panel {
+        margin-bottom: 0;
+        border-radius: $panel-border-radius;
+    }
+
+    .panel-heading {
+        border-bottom: 0;
+
+        + .panel-collapse > .list-group,
+        + .panel-collapse > .panel-body {
+            border-top: $bs-panel-divider;
+        }
+    }
+
+    .panel-footer {
+        + .panel-collapse .panel-body {
+            border-bottom: $bs-panel-divider;
+        }
+    }
+}

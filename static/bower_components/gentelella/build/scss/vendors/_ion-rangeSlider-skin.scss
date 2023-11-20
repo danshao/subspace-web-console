@@ -1,0 +1,148 @@
+/*==========================
+ * ion RangeSlider Skin
+ * ========================= */
+// .irs-bar,
+// .irs-bar-edge,
+// .irs-line-left,
+// .irs-line-mid,
+// .irs-line-right,
+// .irs-slider {
+//     background: url("../img/sprite-skin-flat.png") repeat-x;
+// }
+
+.irs {
+    height: 40px;
+}
+
+.irs-with-grid {
+    height: 60px;
+}
+
+.irs-line {
+    height: 12px;
+    top   : 25px;
+}
+
+.irs-line-left,
+.irs-line-mid,
+.irs-line-right {
+    height          : 12px;
+    background-color: $irs-bg;
+}
+
+.irs-line-left {
+    border-radius: 6px 0 0 6px;
+}
+
+.irs-line-right {
+    border-radius: 0 6px 6px 0;
+}
+
+.irs-bar {
+    height          : 12px;
+    top             : 25px;
+    //background-position: 0 -60px;
+    background-color: $irs-bar-bg;
+}
+
+.irs-bar-edge {
+    top             : 25px;
+    height          : 12px;
+    width           : 9px;
+    //background-position: 0 -90px;
+    border-radius   : 6px 0 0 6px;
+    background-color: $irs-bar-bg;
+}
+
+// .irs-shadow {
+//     height    : 3px;
+//     top       : 34px;
+//     background: #000;
+//     opacity   : 1;
+// }
+
+// .lt-ie9 .irs-shadow {
+//     filter: alpha(opacity=25);
+// }
+
+.irs-slider {
+    width              : 16px;
+    height             : 18px;
+    top                : 22px;
+    &::before{
+        @include transition(all .3s ease);
+        background-color: $irs-bar-bg;
+        position: absolute;
+        display: block;
+        content: '';
+        height: 18px;
+        width: 2px;
+        top:0;
+        left: 50%;
+        margin-left: -1px;
+    }
+    &.state_hover,
+    &:hover{
+        &::before{
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-left: 0;
+            top:1px;
+            left: 0;
+            background-color: $irs-slider-hover;
+            box-shadow: 0 1px 8px 0 rgba(darken($irs-bar-bg, 50%), .3);
+        }
+    }
+}
+
+
+
+.irs-max,
+.irs-min {
+    color             : $irs-limit-color;
+    font-size         : 10px;
+    line-height       : 1.333;
+    text-shadow       : none;
+    top               : 0;
+    padding           : 1px 3px;
+    background        : $irs-limit-bg;
+    border-radius     : $border-radius-sm;
+}
+
+.irs-from,
+.irs-single,
+.irs-to {
+    color             : $irs-num-color;
+    font-size         : 10px;
+    line-height       : 1.333;
+    text-shadow       : none;
+    padding           : 1px 5px;
+    background        : $irs-num-bg;
+    border-radius     : $border-radius-sm;
+}
+
+.irs-from:after,
+.irs-single:after,
+.irs-to:after {
+    position        : absolute;
+    display         : block;
+    content         : "";
+    bottom          : -6px;
+    left            : 50%;
+    width           : 0;
+    height          : 0;
+    margin-left     : -3px;
+    overflow        : hidden;
+    border          : 3px solid transparent;
+    border-top-color: $irs-num-bg;
+}
+
+.irs-grid-pol {
+    background: $irs-grid-line;
+}
+
+.irs-grid-text {
+    color: $irs-grid-color;
+}

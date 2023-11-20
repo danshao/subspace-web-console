@@ -1,0 +1,8 @@
+.DS_Store
+.jsbeautifyrc
+
+web-console*
+vendor/*
+public/*
+.idea
+tmp

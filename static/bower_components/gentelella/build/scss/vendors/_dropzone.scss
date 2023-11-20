@@ -1,0 +1,102 @@
+/* =============================
+ *  Vendor - Dropzone.js
+================================ */
+.dropzone {
+    min-height: 300px;
+    border    : 1px dashed $input-border;
+    background: $input-bg;
+    color     : #fff;
+
+    .dz-message {
+        font-size: 1.125rem;
+    }
+
+    .dz-preview {
+        border: solid 1px $dp-preview-border-color;
+
+        .dz-image {
+            border-radius: 0;
+
+            &::after,
+            img {
+                @include transition( all .3s ease-in-out);
+            }
+
+            &::after {
+                content   : '';
+                display   : block;
+                width     : 100%;
+                height    : 100%;
+                position  : absolute;
+                left      : 0;
+                top       : 0;
+                right     : 0;
+                bottom    : 0;
+                opacity   : 0.75;
+                background: $gray-lv-9;
+            }
+        }
+
+        &.dz-file-preview {
+            .dz-image {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .dz-details {
+            color  : inherit;
+            opacity: 1;
+
+            .dz-size {
+                span {
+                    border-radius: 0;
+                    line-height  : 1;
+                    background   : transparent;
+                }
+            }
+
+            .dz-filename {
+                span {
+                    line-height : 1;
+                    background  : transparent;
+                    border-width: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .dz-image {
+                img {
+                    @include filter(blur(0));
+                }
+
+                &::after {
+                    opacity: 0.5;
+                }
+            }
+
+            .dz-details {
+                .dz-filename {
+                    position: absolute;
+                    left    : 50%;
+                    @include transform(translateX(-50%));
+
+                    span {
+                        background   : $black;
+                        border-width : 0;
+                        border-radius: 1px;
+                        padding      : 2px 4px;
+                    }
+                }
+            }
+        }
+
+        &.dz-file-preview .dz-image {
+            background   : $dp-preview-bg;
+            color        : $dp-preview-color;
+            border-radius: 0;
+        }
+    }
+}

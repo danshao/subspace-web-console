@@ -1,0 +1,73 @@
+/* =============================
+ * Modals
+================================ */
+
+.modal {
+    color: $modal-color;
+
+    a {
+        color: $modal-link;
+
+        &:focus,
+        &:hover {
+            color: $modal-link-hover;
+        }
+    }
+}
+
+.modal-content {
+    background-color: $modal-content-bg;
+    border          : 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+    border          : 1px solid $modal-content-border-color;
+    border-radius   : $border-radius-lg;
+}
+// Modal header
+
+.modal-header {
+    padding      : $modal-title-padding;
+    border-bottom: 1px solid $modal-header-border-color;
+}
+// Close icon
+
+.modal-header .close {
+    color     : $gray-lv-8;
+    margin-top: 0;
+}
+// Title text within header
+
+.modal-title {
+    line-height: $modal-title-line-height;
+}
+
+.modal-body {
+    padding: $modal-inner-padding;
+}
+// Footer (for actions)
+
+.modal-footer {
+    padding   : $modal-inner-padding;
+    border-top: 1px solid $modal-footer-border-color;
+    .btn + .btn{
+        margin-left: 2px;
+    }
+}
+// Scale up the modal
+@media (min-width: 768px) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        width : $modal-md;
+    }
+
+    .modal-content {
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+    // Modal sizes
+    .modal-sm {
+        width: $modal-sm;
+    }
+}
+@media (min-width: 992px) {
+    .modal-lg {
+        width: $modal-lg;
+    }
+}

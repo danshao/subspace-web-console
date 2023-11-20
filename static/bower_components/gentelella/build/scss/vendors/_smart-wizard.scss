@@ -1,0 +1,190 @@
+/* =============================
+ *  Vendor - jQuery Smart Wizard
+================================ */
+
+.form_wizard{
+    .stepContainer {
+        display   : block;
+        position  : relative;
+        margin    : 0;
+        padding   : 0;
+        //border: 0 solid #CCC;
+        overflow-x: hidden;
+    }
+
+    .loader {
+        display: none;
+    }
+
+    .msgBox {
+        display: none;
+    }
+}
+
+ul.wizard_steps {
+    display   : table;
+    list-style: none;
+    position  : relative;
+
+    li {
+        text-align: center;
+
+        a {
+            &,
+            &:hover {
+                display        : block;
+                position       : relative;
+                opacity        : 1;
+                line-height    : 1.1;
+                color          : $body-color-muted;
+                text-decoration: none;
+                //cursor         : default;
+            }
+
+            &::before {
+                content   : '';
+                position  : absolute;
+                background: $sw-step-bg;
+                z-index   : 4;
+            }
+
+            .step_no {
+                position     : relative;
+                z-index      : 5;
+                border-radius: 100px;
+                display      : block;
+                font-family  : $font-family-brand;
+                color        : $sw-step-color;
+                width        : $sw-step-size;
+                height       : $sw-step-size;
+                line-height  : $sw-step-size;
+                font-size    : 1.25rem;
+                text-align   : center;
+                margin       : 0 auto 5px;
+                background   : $sw-step-surrent-bg;
+            }
+
+            &.disabled .step_no {
+                background: $sw-step-bg;
+            }
+
+            &.selected {
+                &,
+                .step_no {
+                    color: $sw-step-surrent-color;
+                }
+
+                &::before {
+                    background: $sw-step-surrent-bg;
+                }
+            }
+
+            &.done {
+                &::before,
+                .step_no {
+                    background: $sw-step-done-bg;
+                    color     : $sw-step-done-color;
+                }
+            }
+        }
+    }
+}
+
+/* Wizard Horizontal */
+.wizard_horizontal ul.wizard_steps {
+    width : 100%;
+    margin: 40px 0;
+
+    li {
+        display: table-cell;
+
+        a::before {
+            height:  $sw-step-border-width;
+            top   : floor($sw-step-size / 2);
+            width : 100%;
+            left  : 0;
+        }
+
+        &:first-child a::before {
+            left: 50%;
+        }
+
+        &:last-child a::before {
+            left:auto;
+            right: 50%;
+            width: 50%;
+        }
+    }
+}
+
+/* Verticle */
+.wizard_verticle {
+    .stepContainer {
+        width  : 80%;
+        float  : left;
+        padding: 0 10px;
+    }
+
+    .wizard_content {
+        width       : 80%;
+        float       : left;
+        padding-left: 20px;
+    }
+
+    ul.wizard_steps {
+        width : 20%;
+        float : left;
+        margin: 0 0 $sw-step-size;
+
+        li {
+            display: list-item;
+
+            a {
+                height: 80px;
+
+                &:before {
+                    height     : 100%;
+                    top        : $sw-step-size;
+                    width      : $sw-step-border-width;
+                    z-index    : 4;
+                    left       : 50%;
+                    margin-left: floor(-($sw-step-border-width/2));
+                }
+
+                &:first-child {
+                    margin-top: $sw-step-size;
+                }
+            }
+
+            &:first-child a::before {
+                left: 50%;
+            }
+
+            &:last-child a::before {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Action Bar */
+.actionBar {
+    width     : 100%;
+    border-top: 1px solid $divider-color;
+    padding   : 20px 5px;
+    text-align: right;
+    margin-top: 10px;
+    clear:both;
+
+    .buttonDisabled {
+        cursor        : not-allowed;
+        pointer-events: none;
+        opacity       : .5;
+        box-shadow    : none;
+        display: none;
+    }
+
+    a {
+        margin: 0 3px;
+    }
+}

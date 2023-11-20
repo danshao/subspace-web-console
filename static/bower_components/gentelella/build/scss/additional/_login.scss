@@ -1,0 +1,107 @@
+/* =============================
+ * login
+================================ */
+a.hiddenanchor {
+    display: none;
+}
+
+#signin:target ~ .login-wrapper .signin-form,
+#signup:target ~ .login-wrapper .signup-form,
+#getPassword:target ~ .login-wrapper .password-form{
+    z-index: 22;
+    //@include animation-name(fadeInDown);
+    @include animation-name(flipInX);
+    @include animation-delay(.3s);
+    opacity: 1;
+
+}
+
+#signin:target ~ .login-wrapper .signup-form,
+#signup:target ~ .login-wrapper .signin-form,
+#signin:target ~ .login-wrapper .password-form,
+#signup:target ~ .login-wrapper .password-form,
+#getPassword:target ~ .login-wrapper .signin-form {
+    //@include animation-name(fadeOutUp);
+    @include animation-name(flipOutX);
+}
+
+.login {
+    background: $login-page-bg;
+}
+
+.login-wrapper {
+    right: 0;
+    margin: 5% auto 0;
+    position: relative;
+
+    .login-heading{
+        width: 212px;
+        margin:0 auto 1.25rem;
+        position: relative;
+        z-index: 30;
+    }
+
+    .login-content {
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        min-width: 320px;
+
+    }
+
+    .signin-form,
+    .signup-form,
+    .password-form {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        .inner{
+            padding:15px 20px;
+            background: $login-form-wrap-bg;
+        }
+        .heading{
+            font-size: 1.5rem;
+        }
+        .form-control{
+            border-radius: $border-radius-sm;
+        }
+        .input-group{
+            .form-control{
+                margin-top: -1px;
+                &:first-child{
+                    border-radius: $border-radius-sm $border-radius-sm 0 0;
+                }
+                &:last-child{
+                    border-radius: 0 0 $border-radius-sm $border-radius-sm;
+                }
+                &:focus{
+                    z-index: 3;
+                }
+            }
+        }
+    }
+
+    .signin-form {
+        z-index: 22;
+    }
+
+    .signup-form {
+        z-index: 21;
+        opacity: 0;
+    }
+    .password-form {
+        z-index: 20;
+        opacity: 0;
+    }
+    .login-footer{
+        padding:15px;
+        opacity: .65;
+    }
+}
+
+/* animate */
+.animate {
+    @include animation-fill-mode(both);
+    @include animation-duration(.5s);
+    @include animation-timing-function(ease);
+}

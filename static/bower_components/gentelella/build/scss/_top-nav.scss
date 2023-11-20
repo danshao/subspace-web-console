@@ -1,0 +1,195 @@
+/* =============================
+ * Top Nav
+================================ */
+.top-nav {
+    display: block;
+    margin-left: $aside-width;
+    font-size: $font-size-base;
+
+    .nav-menu{
+        float: left;
+        background: $header-bg;
+        //margin-bottom: 10px;
+        width: 100%;
+        min-height: $header-height;
+        position: relative;
+        .nav{
+            > li{
+                > a{
+                    @include transition($transition-base);
+                    &:focus,
+                    &:hover{
+                         background: $header-nav-hover-bg;
+                    }
+                }
+                &.open{
+                    > a,
+                    > a:focus,
+                    > a:hover{
+                        background: $header-nav-open-bg;
+                    }
+                }
+            }
+            &.navbar-nav{
+                > li > a{
+                    text-align: center;
+                    line-height: 32px;
+                    padding: 12px;
+                    min-width: 56px;
+                }
+            }
+        }
+
+        .navbar-right {
+            margin: 0;
+            width: 70%;
+            float: right;
+            padding-right: 15px;
+
+            > li {
+                //display: inline-block;
+                display: block;
+                float: right;
+                position: static;
+                @media (min-width: 480px) {
+                    position: relative;
+                }
+            }
+        }
+        .dropdown-menu {
+            border-width: 0;
+            li a .fa{
+                font-size: 14px;
+                margin-top: 2px;
+            }
+            &.msg_list{
+                li{
+                    display: block;
+                }
+
+            }
+        }
+
+        @media (min-width: 480px) {
+            position: static;
+        }
+    }
+
+
+    // * Top bar Profile
+    .user-profile {
+        img {
+           width: 24px;
+           height: 24px;
+           border-radius: 50%;
+           margin-right: 10px;
+       }
+        .fa{
+            margin-left: 5px;
+        }
+    }
+
+    li.open{
+        .user-profile span.fa{
+            @include transform( rotate(180deg)) ;
+        }
+    }
+
+
+    // ul.top_profiles {
+    //     height: 330px;
+    //     width: 100%;
+    //     li {
+    //        margin: 0;
+    //        padding: 3px 5px;
+    //        &:nth-child(odd) {
+    //            background-color: #eee;
+    //        }
+    //    }
+    // }
+}
+
+
+/* Info number */
+.info-number .badge {
+    font-size    : 12px;
+    font-weight  : normal;
+    line-height  : 1;
+    padding      : 2px 4px 1px;
+    position     : absolute;
+    right        : 15%;
+    top          : 16%;
+    border-radius: 2px;
+}
+
+/* Toggle Button */
+.toggle {
+    float: left;
+    margin: 0;
+    width: $header-height;
+    height: $header-height;
+    a {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        width: inherit;
+        height: inherit;
+        margin: 0;
+        opacity: .75;
+        @include transition($transition-base);
+
+        .bars{
+            top: 50%;
+            left: 50%;
+            margin-top: -1px;
+            margin-left: -12px;
+            &:before,
+            &:after{
+                content: '';
+            }
+            &,
+            &:before,
+            &:after{
+                background: $body-color;
+                position: absolute;
+                display: block;
+                width: 24px;
+                height: 2px;
+            }
+            &:before{
+                top:-7px;
+            }
+            &:after{
+                bottom:-7px;
+            }
+        }
+
+        &:hover,
+        &:focus{
+            //background: $header-nav-hover-bg;
+            opacity: 1;
+            .bars{
+                &,
+                &:before,
+                &:after{
+                    background: $white;
+                }
+            }
+        }
+    }
+}
+
+/* Sidebar 收窄狀態 */
+.nav-sm .top-nav {
+    display: block;
+    margin-left: $aside-width-sm;
+    z-index: 2;
+}
+
+/* Sidebar 開啟狀態 */
+@media (max-width: 991px) {
+    .nav-md .top-nav {
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,64 @@
+/* ---------------------------
+ * Dropdown menu ( Bootstrap customed global )
+-----------------------------*/
+.dropdown-menu {
+    background: $dropdown-bg;
+    border: $dropdown-border;
+    border-radius: $dropdown-border-radius;
+    background-clip: padding-box;
+    overflow: hidden;
+    box-shadow: $dropdown-shadow;
+    padding: 0;
+    font-size: $font-size-base;
+    z-index: 9998;
+    color: $dropdown-color;
+    a{
+        color: $dropdown-link;
+        &:focus,
+        &:hover {
+            color: $dropdown-link-hover;
+        }
+    }
+
+    > li > a {
+        padding: $dropdown-padding-y $dropdown-padding-x;
+        color: $dropdown-link;
+        &:focus,
+        &:hover {
+            background:$dropdown-link-hover-bg;
+            color: $dropdown-link-hover;
+        }
+    }
+
+    &.msg_list span {
+        white-space: normal;
+    }
+
+    .divider {
+        border-bottom: $dropdown-divider;
+        margin: 0;
+    }
+
+    .navbar-nav .open & {
+        &.msg_list {
+            width: 300px;
+        }
+    }
+    // checkbox / radio 調整為白色背景
+    .label-cr {
+        input[type="checkbox"],
+        input[type="radio"]{
+            &:checked +.labelbox .ico {
+                background-color: transparent;
+            }
+            & + .labelbox .ico{
+                border-color: rgba($input-cr-border, .5);
+            }
+        }
+        .labelbox {
+            .ico{
+                background: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/* =============================
+ * Message List
+ * Top Bar User Message List
+================================ */
+.msg_list {
+    background: $msg-bg !important;
+
+    > li {
+        background: $msg-li-bg;
+        @include display(flex);
+        width     : 100%;
+        position  : relative;
+
+        & + li {
+            margin-top: 5px;
+        }
+
+        > a {
+            display: block;
+            padding: 10px 4rem 10px 10px !important;
+            width  : 100%;
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
+
+            .image {
+                display: block;
+                width  : 44px;
+                float  : left;
+                margin : 2px 10px 0 0;
+            }
+
+            .image img {
+                width        : 100%;
+                height       : auto;
+                border-radius: 2px 2px 2px 2px;
+            }
+
+            .name {
+                display      : block;
+                margin-bottom: 0.25em;
+            }
+
+            .time {
+                font-size  : 0.75rem;
+                font-weight: bold;
+                position   : absolute;
+                top        : 7px;
+                right      : 15px;
+            }
+
+            .message {
+                display  : block !important;
+                font-size: 0.8125rem;
+            }
+        }
+    }
+
+    &.dropdown-menu {
+        background: $dropdown-msg-bg !important;
+        padding   : 5px;
+
+        > li {
+            background: $dropdown-msg-li-bg;
+
+            & + li {
+                margin-top: 2px;
+            }
+
+            > a {
+                padding: 5px !important;
+                color  : rgba($body-color-dark, .75) !important;
+
+                &:focus,
+                &:hover {
+                    background: #fff;
+                    color     : $body-color-dark !important;
+                }
+
+                .image {
+                    width     : 32px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

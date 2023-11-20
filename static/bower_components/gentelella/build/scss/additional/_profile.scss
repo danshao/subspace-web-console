@@ -1,0 +1,28 @@
+/* =============================
+ *  Profile
+================================ */
+.profile_left {
+    .user-name {
+        font-size: $font-size-h3;
+    }
+
+    .info-table {
+        margin: 15px 0;
+    }
+
+    .user-skills {
+        margin: 15px 0;
+    }
+
+    ul.user-data li {
+        margin-bottom: 6px;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .progress {
+            width: 90%;
+        }
+    }
+}

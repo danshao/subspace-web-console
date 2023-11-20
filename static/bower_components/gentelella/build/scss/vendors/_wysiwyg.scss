@@ -1,0 +1,70 @@
+/* =============================
+ *  Vendor - bootstrap-wysiwyg
+================================ */
+.editor-wrapper {
+    min-height: 250px;
+    background-color: $input-bg;
+    border-collapse: separate;
+    border: 1px solid $input-border;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    //box-shadow: rgba(0, 0, 0, 0.0745098) 0 1px 1px 0 inset;
+    border-radius: $input-border-radius;
+    overflow: scroll;
+    outline: none;
+}
+
+.voiceBtn {
+    width: 20px;
+    color: transparent;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: none;
+    @include transform (scale(2.0, 2.0)) ;
+}
+
+div[data-role="editor-toolbar"] {
+    @include user-select(none);
+}
+
+.dropdown-menu a {
+    cursor: pointer;
+}
+
+/*
+ * Editor Buttons
+-------------------------------------- */
+.btn-toolbar.editor {
+    zoom   : 1;
+    margin : 5px 2px;
+    padding: 3px 0;
+
+    .btn:not(button) {
+        background: $bs-wysiwyg-btn-bg;
+        min-width: 42px;
+        padding: 3px 6px;
+        vertical-align: middle;
+
+        &.btn-info {
+            background  : $bs-wysiwyg-btn-info-bg;
+            border-color: $bs-wysiwyg-btn-info-bg;
+        }
+        &:active{
+            opacity: .5;
+            background  : rgba($btn-muted-bg,.5);
+        }
+    }
+}
+
+/*
+* Create Link
+* ------------------------- */
+.input-append.dropdown-menu {
+    padding: 10px;
+    // &.input-append{
+    //     @include transform(translateX(-50%));
+    // }
+    // .input-url{
+    //     width: 20rem;
+    // }
+}

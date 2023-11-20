@@ -1,0 +1,65 @@
+/* ---------------------------
+ * Nav
+-----------------------------*/
+.nav{
+    > li{
+        > a{
+            &:hover,
+            &:focus{
+                color: $nav-hover-color;
+                background: $nav-hover-bg;
+            }
+        }
+    }
+    .open{
+        > a{
+            &,
+            &:hover,
+            &:focus{
+                color: $nav-hover-color;
+                background: $nav-hover-bg;
+            }
+        }
+    }
+}
+// .nav > li > a:focus{
+//     text-decoration: none;
+//     background: transparent;
+// }
+//
+// .nav li.current-page {
+//     background: rgba(255, 255, 255, 0.05);
+// }
+//
+// .nav li li li.current-page {
+//     background: none;
+// }
+//
+// .nav li li.current-page a {
+//     color: #fff;
+// }
+
+// .navbar-nav > li > a {
+//     font-weight: 500;
+//     color: #ECF0F1 !important;
+//     margin-left: 0 !important;
+//     line-height: 32px;
+// }
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+.navbar-static-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-sm .hidden-small {
+    visibility: hidden;
+}

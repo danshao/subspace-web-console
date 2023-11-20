@@ -1,0 +1,58 @@
+/* =============================
+ * Typography
+================================ */
+
+/* Text colors Mixin*/
+@mixin text-emphasis-variant($parent, $color) {
+    #{$parent} {
+        color: $color !important;
+    }
+
+    a#{$parent}:focus,
+    a#{$parent}:hover {
+        color: lighten($color, 10%) !important;
+    }
+}
+
+@include text-emphasis-variant('.white', $white);
+@include text-emphasis-variant('.red', $red);
+@include text-emphasis-variant('.orange', $orange);
+@include text-emphasis-variant('.yellow', $yellow);
+@include text-emphasis-variant('.lime', $lime);
+@include text-emphasis-variant('.green', $green);
+@include text-emphasis-variant('.cyan', $cyan);
+@include text-emphasis-variant('.blue', $blue);
+@include text-emphasis-variant('.indigo', $indigo);
+@include text-emphasis-variant('.purple', $purple);
+@include text-emphasis-variant('.gray', $gray);
+
+@include text-emphasis-variant('.text-danger', $red);
+@include text-emphasis-variant('.text-warning', $orange);
+@include text-emphasis-variant('.text-success', $green);
+@include text-emphasis-variant('.text-info', $blue);
+@include text-emphasis-variant('.text-primary', $brand-primary);
+@include text-emphasis-variant('.text-second', $brand-second);
+@include text-emphasis-variant('.text-muted', $body-color-muted);
+
+
+code {
+    border-radius: $border-radius-sm;
+    color        : $code-color;
+    background   : $code-bg;
+}
+
+
+blockquote{
+    border-left: 4px solid rgba($gray-lv-5, .2);
+    font-size: 1rem;
+    .small,
+    small,
+    footer{
+        background: transparent;
+        color: $body-color-muted;
+    }
+}
+.blockquote-reverse,
+blockquote.pull-right{
+    border-right: 4px solid rgba($gray-lv-5, .2);
+}

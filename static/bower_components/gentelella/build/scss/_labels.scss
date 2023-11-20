@@ -1,0 +1,43 @@
+/* =============================
+ * Labels
+================================ */
+// Mixins
+@mixin label-variant($background, $color) {
+    background-color: $background;
+    color: $color;
+    &[href] {
+        &:focus,
+        &:hover {
+            background-color: darken($background, 10%);
+        }
+    }
+}
+
+.label{
+    font-weight: $font-weight-base;
+    padding: .3em .5em;
+}
+
+.label-default {
+    @include label-variant($brand-default, #fff);
+}
+
+.label-primary {
+    @include label-variant($brand-second, #fff);
+}
+
+.label-success {
+    @include label-variant($brand-success, #fff);
+}
+
+.label-info {
+    @include label-variant($brand-info, #fff);
+}
+
+.label-warning {
+    @include label-variant($brand-warning, shade($brand-warning, 80% ));
+}
+
+.label-danger {
+    @include label-variant($brand-danger, #fff);
+}

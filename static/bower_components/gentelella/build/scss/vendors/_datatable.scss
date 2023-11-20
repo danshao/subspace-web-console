@@ -1,0 +1,286 @@
+/* =============================
+ *  Vendor - DataTable
+================================ */
+table.dataTable{
+    thead{
+        .sorting,
+        .sorting_asc,
+        .sorting_asc_disabled,
+        .sorting_desc,
+        .sorting_desc_disabled{
+            &::after{
+                font-size: 14px;
+                width: 14px;
+                height:14px;
+                font-weight: normal;
+                font-family:'FontAwesome';
+                line-height: 1;
+                color: $body-color;
+                opacity: .75;
+                top:16px;
+                bottom:auto;
+            }
+        }
+        .sorting:after{
+            content: '\f0dc'
+        }
+        .sorting_asc:after{
+            content: '\f160'
+        }
+        .sorting_desc:after{
+            content: '\f161'
+        }
+    }
+
+    td,
+    th {
+        &.focus{
+            outline       : 2px solid $brand-primary !important;
+            outline-offset: -1px;
+        }
+    }
+
+    > tbody > tr{
+        &.child ul{
+            display: block;
+            li{
+                display: block;
+                border-bottom-color: $divider-color;
+            }
+        }
+
+    }
+    &.dtr-inline.collapsed{
+        > tbody > tr{
+            > td,
+            > th{
+                &:first-child:before{
+                    top:12px;
+                    box-sizing: border-box;
+                    width: 18px;
+                    height: 18px;
+                    line-height: 18px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    border-width: 0;
+                    background-color: $brand-primary;
+                }
+            }
+            &.parent{
+                > td,
+                > th{
+                    &:first-child:before{
+
+                        background-color: $brand-second;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dataTables_length {
+    width: 40%;
+    float: left;
+}
+
+.dataTables_filter {
+    width     : 50%;
+    float     : right;
+    text-align: right;
+}
+
+.dataTables_info {
+    width: 60%;
+    float: left;
+}
+
+.dataTables_paginate {
+    float     : right;
+    text-align: right;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear   : both;
+    zoom    : 1;
+     > .row{
+      overflow:auto !important; /*prevent datatables overflowing its container*/
+    }
+}
+
+@media (max-width: 460px) {
+    .dataTables_wrapper .col-sm-6 {
+        width: 100%;
+        margin-bottom: 5px;
+        .dataTables_filter {
+            float: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+   .dataTables_length { float:none; }
+}
+
+
+
+// a.DTTT_button,
+// button.DTTT_button,
+// div.DTTT_button {
+//     border    : 1px solid #E7E7E7 !important;
+//     background: #E7E7E7 !important;
+//     box-shadow: none !important;
+// }
+//
+//
+
+
+//
+// .dataTables_processing {
+//     position        : absolute;
+//     top             : 50%;
+//     left            : 50%;
+//     width           : 250px;
+//     height          : 30px;
+//     margin-left     : -125px;
+//     margin-top      : -15px;
+//     padding         : 14px 0 2px;
+//     border          : 1px solid #ddd;
+//     text-align      : center;
+//     color           : #999;
+//     font-size       : 14px;
+//     background-color: white;
+// }
+//
+
+//
+
+//
+// table.display {
+//     margin: 0 auto;
+//     clear : both;
+//     width : 100%;
+// }
+//
+// table.display thead th {
+//     padding      : 8px 18px 8px 10px;
+//     border-bottom: 1px solid black;
+//     font-weight  : bold;
+//     cursor       : pointer;
+// }
+//
+// table.display tfoot th {
+//     padding    : 3px 18px 3px 10px;
+//     border-top : 1px solid black;
+//     font-weight: bold;
+// }
+//
+// table.display tr.heading2 td {
+//     border-bottom: 1px solid #aaa;
+// }
+//
+// table.display td {
+//     padding: 3px 10px;
+// }
+//
+// table.display td.center {
+//     text-align: center;
+// }
+//
+// table.display thead td:active,
+// table.display thead th:active {
+//     outline: none;
+// }
+//
+// .dataTables_scroll {
+//     clear: both;
+// }
+//
+// .dataTables_scrollBody {
+//     *margin-top               : -1px;
+//     -webkit-overflow-scrolling: touch;
+// }
+//
+//
+// .top .dataTables_info {
+//     float: none;
+// }
+//
+// .clear {
+//     clear: both;
+// }
+//
+// .dataTables_empty {
+//     text-align: center;
+// }
+//
+// tfoot input {
+//     margin: 0.5em 0;
+//     width : 100%;
+//     color : #444;
+// }
+//
+// tfoot input.search_init {
+//     color: #999;
+// }
+//
+// td.group {
+//     background-color: #d1cfd0;
+//     border-bottom   : 2px solid #A19B9E;
+//     border-top      : 2px solid #A19B9E;
+// }
+//
+// td.details {
+//     background-color: #d1cfd0;
+//     border          : 2px solid #A19B9E;
+// }
+//
+// .example_alt_pagination div.dataTables_info {
+//     width: 40%;
+// }
+//
+// .paging_full_numbers {
+//     width      : 400px;
+//     height     : 22px;
+//     line-height: 22px;
+// }
+//
+// .paging_full_numbers a:active {
+//     outline: none;
+// }
+//
+// .paging_full_numbers a:hover {
+//     text-decoration: none;
+// }
+//
+// .paging_full_numbers a.paginate_active,
+// .paging_full_numbers a.paginate_button {
+//     border               : 1px solid #aaa;
+//     -webkit-border-radius: 5px;
+//     -moz-border-radius   : 5px;
+//     padding              : 2px 5px;
+//     margin               : 0 3px;
+//     cursor               : pointer;
+// }
+//
+// .paging_full_numbers a.paginate_button {
+//     background-color: #ddd;
+// }
+//
+// .paging_full_numbers a.paginate_button:hover {
+//     background-color: #ccc;
+//     text-decoration : none !important;
+// }
+//
+// .paging_full_numbers a.paginate_active {
+//     background-color: #99B3FF;
+// }
+//
+// table.display tr.even.row_selected td {
+//     background-color: #B0BED9;
+// }
+//
+// table.display tr.odd.row_selected td {
+//     background-color: #9FAFD1;
+// }

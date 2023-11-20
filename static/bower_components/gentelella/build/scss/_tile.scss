@@ -1,0 +1,310 @@
+/* =============================
+ * Tile
+================================ */
+
+.tile-stats,
+.tile_count {
+    .count {
+        font-family: $headings-font-family;
+        line-height: 1;
+        font-weight: $tile-count-weight;
+        color      : $tile-count-color;
+
+        > small {
+            font-size: 0.75em;
+        }
+    }
+}
+
+.tile_count {
+    margin-bottom: 20px;
+
+    .tile_stats_count {
+        border-bottom: 1px solid $divider-color;
+        padding      : 10px 10px 10px 20px;
+        text-overflow: ellipsis;
+        overflow     : hidden;
+        white-space  : nowrap;
+        position     : relative;
+        @media (min-width: 992px) {
+            margin-top    : 20px;
+            margin-bottom : 10px;
+            border-bottom : 0;
+            padding-top   : 0;
+            padding-bottom: 0;
+        }
+
+        &:before {
+            content    : "";
+            position   : absolute;
+            left       : 0;
+            top        : 0;
+            bottom     : 0;
+            height     : 100%;
+            border-left: 1px solid $divider-color;
+            //margin-top: 10px;
+        }
+
+        &:first-child:before {
+            @media (min-width:992px) {
+                border-left: 0;
+            }
+        }
+
+        .count {
+            font-size: 2rem;
+            @media (min-width:768px) {
+                font-size: 2.75rem;
+            }
+            @media (min-width: 992px) and (max-width: 1100px) {
+                font-size: 2rem;
+            }
+        }
+
+        .count_bottom,
+        .count_top {
+            font-size: 0.875rem;
+            //color    : $body-color-muted;
+            // @media (min-width:768px) {
+            //     font-size: .9375rem;
+            // }
+        }
+
+        .count_top {
+            display      : block;
+            margin-bottom: 0.5rem;
+            overflow     : hidden;
+            white-space  : nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .count_bottom i {
+            width : 12px;
+            margin: 0.125em;
+        }
+
+        h2 {
+            color      : $tile-count-color;
+            font-size  : 1.875rem;
+            line-height: 1em;
+            margin     : 3px 0 15px;
+            font-weight: $tile-count-weight;
+        }
+    }
+}
+
+.tile-stats {
+    display        : block;
+    background     : $tile-bg;
+    position       : relative;
+    overflow       : hidden;
+    margin-bottom  : $tile-margin-bottom;
+    padding        : $tile-padding;
+    border-radius  : $tile-border-radius;
+    background-clip: padding-box;
+    @include transition(all .3s ease-in-out);
+
+    .count {
+        position     : relative;
+        z-index      : 2;
+        font-size    : 1.75rem;
+        line-height  : 3.5rem;
+        height       : 3.5rem;
+        white-space  : nowrap;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+    }
+
+    h3 {
+        font-size  : 1.125rem;
+        font-weight: normal;
+        margin     : 0;
+        line-height: 1;
+        margin-left: 3px;
+    }
+
+    p {
+        color    : $body-color-muted;
+        margin   : 2px 0 0 3px;
+        font-size: 0.75rem;
+    }
+
+    .icon {
+        position: absolute;
+        z-index : 1;
+        @include size(3.5rem);
+        right   : 10px;
+        color   : rgba($body-color-muted, .25);
+
+        i.fa,
+        i.ion {
+            font-size     : 3.5rem;
+            @include size(3.5rem);
+            margin        : 0;
+            vertical-align: bottom;
+            padding       : 0;
+        }
+    }
+
+    > .dash-box-footer {
+        position       : relative;
+        text-align     : center;
+        margin-top     : 5px;
+        padding        : 3px 0;
+        color          : #fff;
+        color          : rgba(255, 255, 255, 0.8);
+        display        : block;
+        z-index        : 10;
+        background     : rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+
+        &:hover {
+            color     : #fff;
+            background: rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &.sparkline {
+        padding   : 10px;
+        text-align: center;
+    }
+}
+
+table.tile {
+    h3,
+    h4,
+    span {
+        //font-weight: bold;
+        vertical-align: middle !important;
+    }
+
+    td,
+    th {
+        text-align: center;
+    }
+
+    th {
+        border-bottom: 1px solid #E6ECEE;
+    }
+
+    td {
+        padding: 5px 0;
+
+        ul {
+            text-align  : left;
+            padding-left: 0;
+
+            li {
+                list-style: none;
+                width     : 100%;
+
+                a {
+                    width: 100%;
+
+                    big {
+                        right       : 0;
+                        float       : right;
+                        margin-right: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+table.tile_info {
+    width  : 100%;
+    padding: 10px 15px;
+
+    td {
+        text-align: left;
+        padding   : 1px;
+        font-size : 15px;
+
+        p {
+            white-space  : nowrap;
+            overflow     : hidden;
+            text-overflow: ellipsis;
+            margin       : 0;
+            line-height  : 28px;
+        }
+
+        i {
+            margin-right: 8px;
+            font-size   : 17px;
+            float       : left;
+            width       : 18px;
+            line-height : 28px;
+        }
+
+        &:first-child {
+            width: 83%;
+        }
+    }
+
+    span.right {
+        margin-right: 0;
+        float       : right;
+        position    : absolute;
+        right       : 4%;
+    }
+}
+
+.tiles {
+    margin-top   : 15px;
+    padding-top  : 5px;
+    margin-bottom: 0;
+}
+
+.tile_header {
+    border-bottom: transparent;
+    padding      : 7px 15px;
+    margin-bottom: 15px;
+    background   : #E7E7E7;
+
+    h4 {
+        margin-top   : 0;
+        margin-bottom: 5px;
+    }
+}
+
+.tiles-bottom {
+    padding   : 5px 10px;
+    margin-top: 10px;
+    background: rgba(194, 194, 194, 0.3);
+    text-align: left;
+}
+
+.tile {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    &:hover {
+        text-decoration: none;
+    }
+    > h2 {
+        font-size  : 1.875rem;
+        line-height: 1em;
+        margin     : 3px 0 15px;
+        font-weight: $tile-count-weight;
+    }
+}
+
+.top_tiles {
+    h2 {
+        color      : $tile-count-color;
+    }
+}
+@media (max-width: 1200px) {
+    .graph,
+    .tile {
+        zoom  : 85%;
+        height: inherit;
+    }
+}
+@media (min-width: 192px) and (max-width: 1270px) {
+    table.tile_info span.right {
+        margin-right: 7px;
+        float       : left;
+    }
+}

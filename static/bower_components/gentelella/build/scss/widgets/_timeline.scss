@@ -1,0 +1,131 @@
+/* =============================
+ * Timeline
+================================ */
+.byline {
+    -webkit-font-smoothing: antialiased;
+    //font-style: italic;
+    font-size             : 0.9375em;
+    line-height           : 1.3;
+    color                 : $body-color-muted;
+    margin                : 5px 0;
+}
+
+ul.social li {
+    border: 0;
+}
+
+.timeline {
+    h2.title {
+        position : relative;
+        font-size: 16px;
+        margin   : 0;
+
+        &:before {
+            content      : "";
+            position     : absolute;
+            left         : -24px;
+            top          : 2px;
+            display      : block;
+            width        : 14px;
+            height       : 14px;
+            border       : 3px solid $timeline-dot-border;
+            border-radius: 14px;
+            background   : $timeline-dot-bg;
+        }
+    }
+
+    li {
+        position: relative;
+        //border-bottom: 1px solid $divider-color-accent;
+        clear   : both;
+
+        .block {
+            position   : relative;
+            margin     : 0;
+            //border-left: 2px solid $divider-color-accent;
+            overflow   : visible;
+            padding    : 0 15px 30px;
+            margin-left: $timeline-tag-width + 20;
+
+            &:before {
+                content   : '';
+                position  : absolute;
+                height    : 99.5%;
+                width     : 2px;
+                background: $timeline-line;
+                left      : -3px;
+                top       : 2px;
+            }
+        }
+
+        &:last-child {
+            .block {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .tags {
+        position: absolute;
+        top     : $timeline-tag-top;
+        left    : -($timeline-tag-width + 20);
+        width   : $timeline-tag-width;
+
+        .tag {
+            display        : block;
+            background     : $timeline-tag-bg;
+            color          : $timeline-tag-color !important;
+            height         : $timeline-tag-height;
+            line-height    : $timeline-tag-height;
+            font-size      : 13px;
+            padding        : 0 8px;
+            text-decoration: none;
+            border-radius  : 3px 0 0 3px;
+
+            &:after {
+                content       : '';
+                height        : $timeline-tag-height;
+                width         : 0;
+                position      : absolute;
+                left          : 100%;
+                top           : 0;
+                margin        : 0;
+                pointer-events: none;
+                border-top    : floor($timeline-tag-height / 2) solid transparent;
+                border-bottom : floor($timeline-tag-height / 2) solid transparent;
+                border-left   : floor($timeline-tag-height / 3) solid $timeline-tag-bg;
+            }
+
+            span {
+                display      : block;
+                overflow     : hidden;
+                width        : 100%;
+                white-space  : nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        a.tag {
+            &:hover {
+                background: lighten($timeline-tag-bg, 10%);
+
+                &:after {
+                    border-left-color: lighten($timeline-tag-bg, 10%);
+                }
+            }
+        }
+    }
+
+    .byline {
+        padding: 0.25em 0;
+    }
+
+    &.widget {
+        min-width: 0;
+        max-width: inherit;
+
+        .block {
+            margin-left: 5px;
+        }
+    }
+}

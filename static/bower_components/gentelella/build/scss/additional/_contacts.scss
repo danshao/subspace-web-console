@@ -1,0 +1,59 @@
+/* ========================
+ * Contacts
+ ========================== */
+.profiles-list {
+    @include display(flex);
+    @include flex-wrap(wrap);
+}
+
+.profile-details {
+    float: none;
+    @include display(flex);
+
+    .profile-view {
+        @include display(flex);
+        @include flex-direction(column);
+        @include flex(1);
+
+        padding : 0;
+        overflow: hidden;
+
+        .view-cont {
+            @include flex(1);
+            //padding:15px 10px;
+            .brief {
+                margin: 0;
+            }
+
+            .name {
+                font-size: $font-size-h3;
+                color    : $body-color-accent;
+                margin   : 1rem 0 0;
+            }
+
+            .title {
+                margin-bottom: 1rem;
+            }
+
+            .contact-info {
+                margin-top: 1rem;
+            }
+
+            img.avatar {
+                float : right;
+                width : 120px;
+                height: auto;
+            }
+        }
+
+        .view-footer {
+            background: #F2F5F7;
+            padding   : 9px 0;
+            border-top: 1px solid #E6E9ED;
+        }
+
+        .star-rating {
+            margin: 3px 0;
+        }
+    }
+}

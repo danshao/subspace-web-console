@@ -1,0 +1,16 @@
+
+/*------- NProgress --------*/
+/** NProgress **/
+#nprogress .bar {
+    background: $brand-primary;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px $brand-primary, 0 0 5px $brand-primary;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: $brand-primary;
+    border-left-color: $brand-primary;
+}
+/** /NProgress **/

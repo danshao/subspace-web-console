@@ -1,0 +1,177 @@
+/* =============================
+ * Dark 主題, 物件在白色底呈現時相關設定
+================================ */
+// in wihte BG...
+
+.bg-white,
+.modal-content,
+.dropdown-menu{
+    background: #fff;
+    color: $body-color-dark;
+
+    a:not(.btn){
+        color: $wb-link-color;
+        &:focus,
+        &:hover {
+            color: $wb-link-hover-color;
+        }
+        &:active{
+            color: $wb-link-active-color;
+        }
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    h1, h2, h3, h4, h5, h6 {
+        small {
+            //color  : $body-color-muted-dark;
+            color: inherit;
+            opacity: .75;
+        }
+    }
+
+    @include text-emphasis-variant('.text-muted', $body-color-muted-dark);
+
+    hr,
+    .ln_solid{
+        border-top-color: $wb-divider-color;
+    }
+
+    .well{
+        background: $gray-lv-1;
+        border:solid 1px $gray-lv-2;
+    }
+
+    // Btn Muted
+    .btn-muted {
+        @include button-variant($wb-btn-muted-color, $wb-btn-muted-bg, $wb-btn-muted-border);
+    }
+
+    // Placeholder
+    input,
+    select,
+    textarea,
+    .form-control{
+        &::-moz-placeholder {
+            // Firefox
+            color  : $wb-input-color-placeholder;
+            opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+        }
+        &:-ms-input-placeholder {
+            // Internet Explorer 10+
+            color: $wb-input-color-placeholder;
+        }
+        &::-webkit-input-placeholder {
+            // Safari and Chrome
+            color: $wb-input-color-placeholder;
+        }
+    }
+
+    // Form
+    select:not([multiple]) {
+        background-image   : $wb-select-arrow;
+    }
+
+    .form-control {
+        color: $wb-input-color;
+        border-color: $wb-input-border;
+
+        &:focus {
+            border-color    : $wb-input-focus-border;
+        }
+
+        &[disabled],
+        &[readonly],
+        fieldset[disabled] & {
+            border-color    : $wb-input-border-disabled;
+        }
+    }
+
+    .form-control-feedback{
+        color: $wb-input-border;
+        &,
+        &.left,
+        &.right { border-color: $wb-input-border;}
+    }
+
+    .tagsinput{
+        border-color: $wb-input-border;
+    }
+
+    .label-cr {
+        input[type="checkbox"],
+        input[type="radio"] {
+            & +.labelbox .ico {
+                border-color:  $wb-input-border;
+            }
+        }
+    }
+
+    .label-switch {
+        .ico {
+            background   : lighten($switch-bg, 50%);
+            border-color: lighten($switch-bg, 50%);
+            box-shadow   : inset 0 0 0 1px rgba($switch-bg, 0);
+            &::before {
+                background   : #fff;
+            }
+        }
+    }
+    // vender - bootstrap-wysiwyg
+    .editor.btn-toolbar{
+        .btn:not(button){
+            color: $body-color-dark;
+            &:focus,
+            &:hover{
+                color: $wb-link-hover-color;
+            }
+            &:active{
+                color: $wb-link-hover-color;
+                background: $gray-lv-2;
+            }
+            &.btn-info{
+                &,
+                &:focus,
+                &:hover,
+                &:active{
+                    background: $gray-lv-2;
+                    border-color:  $gray-lv-2;
+                }
+
+            }
+        }
+        .btn-group.open .dropdown-toggle{
+            &,
+            &:focus,
+            &:hover,
+            &:active{
+                background: $gray-lv-2;
+                border-color:  $gray-lv-2;
+            }
+        }
+    }
+    .editor-wrapper{
+        border-color: $wb-input-border;
+    }
+
+    // tabs
+    .nav-tabs {
+        > li {
+            > a {
+                color: $body-color-dark;
+                opacity: .75;
+                &:focus,
+                &:hover {
+                    color: $brand-primary;
+                    opacity: 1;
+                }
+            }
+            &.active > a {
+                &,
+                &:focus,
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

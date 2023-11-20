@@ -1,0 +1,28 @@
+/* =============================
+ *  Vendor - autocomplete
+================================ */
+
+.autocomplete-suggestions {
+    border    : 1px solid $input-border;
+    background: #fff;
+    cursor    : default;
+    color     : $body-color-dark;
+    overflow  : auto;
+
+    strong {
+        font-weight: normal;
+        color      : $blue;
+        font-weight: bold;
+    }
+}
+
+.autocomplete-suggestion {
+    padding    : 2px 5px;
+    font-size  : 1.2em;
+    white-space: nowrap;
+    overflow   : hidden;
+}
+
+.autocomplete-selected {
+    background: $gray-lv-2;
+}

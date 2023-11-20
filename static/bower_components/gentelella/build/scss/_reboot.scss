@@ -1,0 +1,98 @@
+/* === reboot ===================================== */
+
+html {
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 100%; // 1rem = 16px
+    @include box-sizing(border-box);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+@at-root {
+     @-ms-viewport{
+        width: device-width;
+    }
+}
+
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
+@font-face {
+	font-family: 'Eurostile';
+	src: url('../fonts/Eurostile.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Eurostile.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/Eurostile.otf') format('opentype'), /* Open Type Font */
+		 url('../fonts/Eurostile.woff') format('woff'), /* Modern Browsers */
+		 url( '../fonts/Eurostile.woff2') format('woff2'), /* Modern Browsers */
+		 url('../fonts/Eurostile.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url( '../fonts/Eurostile.svg') format('svg'); /* Legacy iOS */
+	font-weight: normal;
+}
+
+body {
+    background-color: $body-bg;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    letter-spacing: $letter-spacing-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    color: $body-color;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+
+    &:focus,
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+    &.underline{
+        text-decoration: underline;
+    }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+    line-height: $headings-line-height;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+
+    small {
+        color      : $body-color-muted;
+        font-family: $font-family-base;
+        font-size  : 0.875rem;
+    }
+
+    > .fa,
+    > .ion,
+    > .glyphicon{
+        font-size: inherit;
+    }
+}
+
+h1, h2,h3,
+.h1, .h2, .h3{
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+b, strong{
+    font-weight: $font-weight-bold;
+}
+p{
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+}
+legend {
+    padding-bottom: 7px;
+}
+
+.small, small{
+    font-size: $font-size-sm;
+}

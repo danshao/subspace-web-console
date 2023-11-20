@@ -1,0 +1,185 @@
+/* =============================
+ * Media gallery
+================================ */
+
+.thumbnail {
+    background  : $thumbnail-bg;
+    border-color: $thumbnail-bg;
+    //height  : 232px;
+    overflow    : hidden;
+    padding     : 0;
+
+    .image {
+        // height  : 120px;
+        // overflow: hidden;
+        position      : relative;
+        display       : block;
+        height        : 0;
+        padding       : 0;
+        overflow      : hidden;
+        //padding-bottom: 75%; // Modifier class for 4:3 aspect ratio
+        padding-bottom: 56.25%; // Modifier class for 16:9 aspect ratio
+
+        img {
+            @include transition(all .3s linear);
+            //== for responsive
+            position: absolute;
+            top     : 0;
+            left    : 0;
+            bottom  : 0;
+            height  : 100%;
+            width   : 100%;
+            border  : 0;
+        }
+    }
+
+    .caption {
+        padding    : 9px 15px;
+        color      : $body-color;
+        line-height: 1.2;
+
+        .img-name {
+            margin: 0 0 0.25em;
+        }
+    }
+}
+
+.view {
+    overflow  : hidden;
+    position  : relative;
+    text-align: center;
+    cursor    : default;
+
+    .mask {
+        overflow: hidden;
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        bottom  : 0;
+        height  : 100%;
+        width   : 100%;
+        border  : 0;
+    }
+
+    .desc,
+    .tools {
+        position  : absolute;
+        left      : 0;
+        width     : 100%;
+        background: rgba(0, 0, 0, 0.35);
+        @include transition(all 0.2s ease-in-out);
+    }
+
+    .desc {
+        font-size    : 0.75rem;
+        color        : #fff;
+        padding      : 10px;
+        margin       : 0;
+        text-align   : center;
+        height       : 30px;
+        top          : -30px;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tools {
+        color     : #fff;
+        text-align: center;
+        font-size : 1.125rem;
+        padding   : 3px;
+        height    : 30px;
+        bottom    : -30px;
+        //@include transform(translateY(100px));
+        a {
+            //position: relative;
+            display    : inline-block;
+            color      : #FFF;
+            font-size  : 1.125rem;
+            font-weight: 400;
+            padding    : 0 8px;
+            opacity    : 0.6;
+            //z-index: 2;
+            &.info {
+                display        : inline-block;
+                text-decoration: none;
+                padding        : 7px 14px;
+                background     : #000;
+                color          : #fff;
+                box-shadow     : 0 0 1px #000;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.view-first {
+    .mask {
+        background-color: rgba(0, 0, 0, 0.5);
+        @include transition(all .4s ease-in-out);
+    }
+
+    .desc,
+    .mask,
+    .tools {
+        opacity: 0;
+    }
+
+    &:hover {
+        img {
+            @include transform(scale(1.1));
+        }
+
+        .desc,
+        .mask,
+        .tools {
+            opacity: 1;
+        }
+
+        .desc {
+            top: 0;
+        }
+
+        .tools {
+            bottom: 0;
+        }
+    }
+}
+
+.gallery {
+    @include display(flex);
+    @include flex-wrap(wrap);
+
+    .col {
+        @include display(flex);
+        width  : 20%;
+        padding: 0 10px;
+    }
+
+    .thumbnail {
+        //margin: 0;
+        @include flex(1);
+    }
+    @media (max-width: 921px) {
+        .col {
+            width: 25%;
+        }
+    }
+    @media (max-width: 769px) {
+        .col {
+            width: 33.3333333333333%;
+        }
+    }
+    @media (max-width: 481px) {
+        .col {
+            width: 50%;
+        }
+    }
+    @media (max-width: 376px) {
+        .col {
+            width: 100%;
+        }
+    }
+}

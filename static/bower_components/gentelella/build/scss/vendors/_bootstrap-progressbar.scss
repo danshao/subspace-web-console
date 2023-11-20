@@ -1,0 +1,108 @@
+/* =============================
+ * Vendor : bootstrap-progressbar
+================================ */
+
+.progress {
+    border-radius  : $bs-progress-radius;
+    background     : $bs-progress-bg;
+    box-shadow     : none;
+    background-clip: padding-box;
+    overflow       : hidden;
+    height         : $bs-progress-height;
+
+    .progress-bar {
+        border-radius   : $bs-progress-radius;
+        box-shadow      : none;
+
+    }
+
+    &.progress_sm {
+        border-radius: $bs-progress-radius-sm;
+        margin-bottom: 18px;
+        height       : 10px !important;
+
+        .progress-bar {
+            border-radius: $bs-progress-radius-sm;
+            height       : 10px !important;
+        }
+    }
+
+    &.vertical.progress_wide {
+        width: 35px;
+    }
+}
+
+.progress-bar {background-color: $bs-progress-bar-bg;}
+
+.progress-bar-success {
+    background-color: $bs-progress-success-bg;
+}
+
+.progress-bar-info {
+    background-color: $bs-progress-info-bg;
+}
+
+.progress-bar-warning {
+    background-color: $bs-progress-warning-bg;
+}
+
+.progress-bar-danger {
+    background-color: $bs-progress-danger-bg;
+}
+
+.progress-bar-gray{
+    background-color: $bs-progress-gray-bg;
+}
+
+.progress-bar-dark{
+    background-color: $bs-progress-dark-bg;
+}
+
+.progress_summary {
+    .progress {
+        margin: 5px 0 12px !important;
+    }
+
+    .row {
+        margin-bottom: 5px;
+
+        .col-xs-2 {
+            padding: 0;
+        }
+    }
+
+    .more_info span {
+        text-align: right;
+        float     : right;
+    }
+
+    .data span {
+        text-align: right;
+        float     : right;
+    }
+
+}
+
+.progress_title {
+    .left {
+        float     : left;
+        text-align: left;
+    }
+
+    .right {
+        float      : right;
+        text-align : right;
+        font-weight: 300;
+    }
+}
+
+ul.verticle_bars {
+    width: 100%;
+    @include display(flex);
+    @include justify-content(center);
+    li {
+        width : 23%;
+        height: 200px;
+        margin: 0;
+    }
+}

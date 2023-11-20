@@ -1,0 +1,225 @@
+/*Content Elements*/
+.subspace-no-container-title {
+  padding: 10px 20px 30px;
+  margin: 0px 0px 30px;
+}
+.subspace-h1-title-visible h1 {
+  overflow: visible;
+  font-size: 24px;
+  padding: 0;
+}
+.page-title .subspace-full-width {
+  width: 100%;
+}
+
+.subspace-list-hover td {
+  cursor: pointer;
+}
+.subspace-group-btn .btn {
+  margin-bottom: 10px;
+}
+.subspace-group-inline-btn .btn {
+    margin-right: 0;
+}
+.subspace-label-description {
+  font-weight: 400;
+}
+.subspace-accordion-table-cell-style > div {
+  border: 3px solid lightgrey;
+  border-top: 0;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 10px 10px;
+}
+.subspace-alert-style {
+  margin-bottom: 0;
+}
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+@media (min-width: 1300px) {
+  .tile_count .tile_stats_count .count {
+      font-size: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .tile_count .tile_stats_count .count {
+      font-size: 32px;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .tile_count .tile_stats_count .count {
+      font-size: 30px;
+  }
+}
+@media (min-width: 1030px) and (max-width: 1099px) {
+  .tile_count .tile_stats_count .count {
+      font-size: 28px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1029px) {
+  .tile_count .tile_stats_count .count {
+      font-size: 26px;
+  }
+}
+@media (min-width: 768px) {
+  .subspace-create-admin-form-border {
+    border-right: 3px solid;
+  }
+}
+@media (max-width: 767px) {
+  .subspace-create-admin-form-border {
+    border-bottom: 3px solid;
+    margin-bottom: 5px;
+  }
+}
+
+.nav-md {
+    background: #10121d;
+}
+
+@media (min-width: 768px) {
+ .split {
+   max-width: 367.72px !important;
+ }
+
+ .single {
+   width: 430.44px !important;
+ }
+}
+
+/*Navbar*/
+.subspace-nav-item span {
+  font-weight: 700;
+}
+.subspace-no-hover-effect {
+  pointer-events: none;
+}
+
+label.subspace-checkbox-label {
+  padding-left: 5px;
+}
+
+/*Footer*/
+/*.subspace-main-margin-footer {
+  margin-bottom: 49px;
+}*/
+.subspace-setup-margin-footer {
+  margin-bottom: 60px;
+}
+.subspace-footer {
+  /*background-color: #F7F7F7;*/
+  margin-left: 0;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+/*@media (min-width: 992px) {
+  .footer_fixed .subspace-footer-move-inward-sidebar {
+    padding-left: 230px;
+  }
+}*/
+
+/*Screen Overlay Effect*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    /*height: 100%;*/
+    height: 0;
+    /*width: 0;*/
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #929292;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    cursor: default;
+}
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+#downloadgroup .panel {
+    border: none !important;
+    margin-top: 0 !important;
+}
+
+.btn.btn-app:first-child {
+  margin-left: 0;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+/* For RWD */
+@media (max-width: 767px) {
+  .page-title {
+    height: 35px;
+  }
+  .page-title .title_left {
+    width: 100%;
+  }
+  .page-title .title_left h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 1200px) {}

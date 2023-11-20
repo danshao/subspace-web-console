@@ -1,0 +1,680 @@
+
+// =================================================
+// Colors
+// =================================================
+$white:                                       #fff !default;
+$black:                                       #000 !default;
+
+$red:                                         #F44336 !default;
+$orange:                                      #ff8a2b !default;
+$yellow:                                      #ffc400 !default;
+$lime:                                        #d0f700 !default;
+$green:                                       #68c600 !default;
+$cyan:                                        #01c0c8 !default;
+$blue:                                        #03a9f3 !default;
+$indigo:                                      #36449f !default;
+$purple:                                      #8e76f5 !default;
+$gray:                                        #7f829b !default;
+
+// =================================================
+// Colors Grayscale
+// // ==============================================
+$gray-lv-1:                                   #f8f9fc !default;
+$gray-lv-2:                                   #e5e8f1 !default;
+$gray-lv-3:                                   #b5b7ca !default;
+$gray-lv-4:                                   #7f829b !default;
+$gray-lv-5:                                   #535872 !default;
+$gray-lv-6:                                   #39415e !default;
+$gray-lv-7:                                   #2c314f !default;
+$gray-lv-8:                                   #1d2239 !default;
+$gray-lv-9:                                   #10121d !default;
+
+// =================================================
+// Brand colors
+// =================================================
+$brand-primary:                               #68c600 !default;
+$brand-second:                                #4052ae !default;
+
+$brand-default:                               lighten($gray-lv-9, 20%) !default;
+$brand-success:                               $green !default;
+$brand-info:                                  $blue !default;
+$brand-warning:                               $yellow !default;
+$brand-danger:                                $red !default;
+
+// =================================================
+// Body color
+// =================================================
+$body-bg:                                     $gray-lv-1 !default;
+$main-bg:                                     $gray-lv-9 !default; // 右區塊背景色
+
+$body-color:                                  #8e98c2 !default;
+$body-color-accent:                           lighten($body-color, 20%) !default;
+$body-color-muted:                            rgba($body-color,.6) !default;
+
+$body-color-dark:                             $gray-lv-9 !default;
+$body-color-muted-dark:                       rgba($body-color-dark,.7) !default;
+
+// =================================================
+// Font
+// =================================================
+$font-family-base:                            'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Roboto', "Helvetica Neue", Arial, sans-serif, "Microsoft JhengHei", 微軟正黑體, "PingFang TC", !default;
+$font-family-brand:                           'Eurostile', Arial, sans-serif, "Microsoft JhengHei", 微軟正黑體, "PingFang TC" !default;
+
+$font-size-base:                              .875rem !default; // ~ 14px
+$font-size-lg:                                1rem !default;
+$font-size-sm:                                .8125rem !default;
+$font-size-xs:                                .75rem !default;
+
+$font-weight-base:                            normal !default;
+$font-weight-bold:                            600 !default;
+
+$letter-spacing-base:                         .03125rem !default;
+$line-height-base:                            1.42857143 !default;
+
+$font-size-h1:                                2.25rem !default;//~36px
+$font-size-h2:                                1.875rem !default;//~30px
+$font-size-h3:                                1.5rem !default;//~24px
+$font-size-h4:                                1.125rem !default;//~18px
+$font-size-h5:                                .875rem !default;//~14px
+$font-size-h6:                                .75rem !default;//~12px
+
+$headings-font-family:                        $font-family-brand !default;
+$headings-font-weight:                        500 !default;
+$headings-line-height:                        1.1 !default;
+$headings-color:                              inherit !default;
+
+// =================================================
+// links
+// =================================================
+$link-color:                                  lighten($body-color, 20%) !default;
+$link-hover-color:                            $white !default;
+$link-active-color:                           lighten($link-color, 10%) !default;
+
+$link-decoration:                             none !default;
+$link-hover-decoration:                       underline !default;
+
+// =================================================
+// Components
+// =================================================
+$line-height-lg:                              (4 / 3) !default;
+$line-height-sm:                              1.5 !default;
+
+$border-radius-base:                          .25rem !default; // ~ 4px
+$border-radius-lg:                            .375rem !default; // ~6px
+$border-radius-sm:                            .1875rem !default; // ~3px
+
+$padding-base-vertical:                       8px !default;
+$padding-base-horizontal:                     12px !default;
+
+$padding-lg-vertical:                         12px !default;
+$padding-lg-horizontal:                       16px !default;
+
+$padding-sm-vertical:                         5px !default;
+$padding-sm-horizontal:                       10px !default;
+
+$padding-xs-vertical:                         4px !default;
+$padding-xs-horizontal:                       5px !default;
+
+$component-active-color:                      $white !default;
+$component-active-bg:                         $brand-primary !default;
+
+$caret-width:                                 .3em !default;
+
+$transition-base:                             all .2s ease-in-out !default;
+$transition-fade:                             opacity .15s linear !default;
+$transition-collapse:                         height .35s ease !default;
+
+$divider-color:                               rgba($gray-lv-6, .4) !default;
+$divider-color-accent:                        lighten($divider-color, 7%) !default;
+$divider:                                     1px solid $divider-color !default;
+$divider-dashed:                              1px dashed lighten($divider-color, 10%) !default;
+
+$code-color:                                  $white !default;
+$code-bg:                                     rgba($gray-lv-9, .75) !default;
+
+// =================================================
+// Buttons
+// =================================================
+$btn-padding-x:                               $padding-base-horizontal !default;
+$btn-padding-y:                               7px !default;
+
+$btn-font-size:                               1rem !default;
+$btn-font-weight:                             normal !default;
+$btn-box-shadow:                              none !default;
+$btn-focus-box-shadow:                        none !default;
+$btn-active-box-shadow:                       none !default;
+
+$btn-border-radius:                           $border-radius-sm !default;
+$btn-border-radius-lg:                        $border-radius-sm !default;
+$btn-border-radius-sm:                        $border-radius-sm !default;
+
+$btn-transition:                              all .1s ease-in-out !default;
+
+// Button default
+$btn-default-color:                           $white !default;
+$btn-default-bg:                              $brand-default !default;
+$btn-default-border:                          $btn-default-bg !default;
+
+// Button primary
+$btn-primary-color:                           $white !default;
+$btn-primary-bg:                              $brand-second !default;
+$btn-primary-border:                          $btn-primary-bg !default;
+
+// Button info
+$btn-info-color:                              $white !default;
+$btn-info-bg:                                 $brand-info !default;
+$btn-info-border:                             $btn-info-bg !default;
+
+// Button success
+$btn-success-color:                           $white !default;
+$btn-success-bg:                              $brand-success !default;
+$btn-success-border:                          $btn-success-bg !default;
+
+// Button warning
+$btn-warning-color:                           shade($brand-warning, 80% ) !default;
+$btn-warning-bg:                              $brand-warning !default;
+$btn-warning-border:                          $btn-warning-bg !default;
+
+// Button danger
+$btn-danger-color:                            $white !default;
+$btn-danger-bg:                               $brand-danger !default;
+$btn-danger-border:                           $btn-danger-bg !default;
+
+// Button light
+$btn-light-color:                             $body-color-dark !default;
+$btn-light-bg:                                $white !default;
+$btn-light-border:                            darken($gray-lv-3, 10%) !default;
+
+// Button muted
+$btn-muted-color:                             lighten($main-bg, 50%) !default;
+$btn-muted-bg:                                lighten($main-bg, 10%) !default;
+$btn-muted-border:                            $btn-muted-bg !default;
+
+// Button disabled
+//$btn-link-disabled-color:        $gray-lv-6 !default;
+
+// Button app
+$btn-app-font-size:                           .8125rem !default;
+$btn-app-color:                               $white !default;
+$btn-app-hover-color:                         $white !default;
+$btn-app-bg:                                  lighten($main-bg, 8%) !default;
+$btn-app-border:                              $btn-app-bg !default;
+$btn-app-hove-bg:                             lighten($btn-app-bg, 8%) !default;
+$btn-app-border-hover:                        lighten($btn-app-border, 8%) !default;
+
+// =================================================
+// Tabs
+// =================================================
+$nav-tabs-border-color:                       lighten($divider-color, 7%) !default;
+
+$nav-tabs-padding-horizontal:                 20px !default;
+$nav-tabs-padding-vertical:                   10px !default;
+$nav-tabs-link-hover-border-color:            transparent !default;
+
+$nav-tabs-active-link-hover-bg:               transparent !default;
+$nav-tabs-link-color:                         $body-color !default;
+$nav-tabs-active-link-hover-color:            $link-hover-color !default;
+$nav-tabs-active-link-hover-border-color:     transparent !default;
+$nav-tabs-active-link-bottom-color:           $brand-primary;
+
+$nav-tabs-justified-link-border-color:        transparent !default;
+$nav-tabs-justified-active-link-border-color: transparent !default;
+
+$tab-pane-padding:                            15px 0 0 !default;
+
+// =================================================
+// panel
+// =================================================
+$panel-bg:                                    lighten($main-bg, 2%) !default;
+
+$panel-border-radius:                         $border-radius-sm !default;
+$panel-padding-horizontal:                    15px !default;
+$panel-padding-vertical:                      15px !default;
+
+$panel-margin-bottom:                         10px !default;
+
+$panel-title-bg:                              lighten($panel-bg, 3%) !default;
+$panel-title-color:                           $body-color !default;
+$panel-title-border:                          none !default;//1px solid lighten($panel-bg, 5%) !default;
+$panel-toolbox-link:                          lighten($panel-bg, 40%) !default;
+
+$bs-panel-bg:                                 lighten($panel-bg, 2.5%) !default;
+$bs-panel-heading-padding:                    13px 15px !default;
+$bs-panel-heading-bg:                         lighten($bs-panel-bg, 3%) !default;
+$bs-panel-heading-hover-bg:                   lighten($bs-panel-bg, 8%) !default;
+$bs-panel-divider:                            solid 1px $bs-panel-heading-bg !default;
+
+$bs-panel-footer-bg:                          lighten($bs-panel-bg, 2.5%) !default;
+$bs-panel-footer-border-color:                lighten($bs-panel-footer-bg, 5%) !default;
+
+// =================================================
+// Well
+// =================================================
+$well-bg:                                     lighten($panel-bg, 3%) !default;
+
+$well-padding:                                15px !default;
+$well-padding-sm:                             10px !default;
+$well-border:                                 none !default;
+$well-border-radius:                          $border-radius-sm !default;
+
+// =================================================
+// Form
+// =================================================
+$cursor-disabled:                             not-allowed !default;
+$input-height-base:                           38px;
+$input-height-lg:                             44px;
+$input-height-sm:                             33px;
+
+$input-bg:                                    transparent !default;
+$input-color:                                 lighten($body-color, 10%) !default;
+$input-border:                                lighten($gray-lv-6, 2%) !default;
+
+$input-padding-vertical:                      $padding-base-vertical !default;
+$input-padding-horizontal:                    $padding-base-horizontal !default;
+
+$input-border-radius:                         0 !default;
+$input-color-placeholder:                     rgba($input-color, .5) !default;
+
+$input-bg-disabled:                           transparent !default;
+$input-border-disabled:                       rgba($input-border, .5) !default;
+
+$input-focus-bg:                              $white !default;
+$input-focus-color:                           $body-color-dark !default;
+$input-focus-border:                          lighten($brand-second, 10%) !default;
+$input-focus-color-placeholder:               $gray-lv-3 !default;
+
+$input-feedback-color:                        $body-color !default;
+$input-feedback-focus-color:                  $brand-second !default;
+
+$legend-color:                                $body-color !default;
+$legend-border-color:                         $input-border !default;
+
+$input-group-addon-bg:                        lighten($input-bg, 20%) !default;
+$input-group-addon-color:                     $input-color !default;
+$input-group-addon-border-color:              $input-border !default;
+
+// select
+$select-arrow:                                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 5'%3E%3Cpath fill='%23ffffff' d='M9,0L4.5,5L0,0H9z'/%3E%3C/svg%3E");
+$select-focus-arrow:                          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 5'%3E%3Cpath fill='%231d2239' d='M9,0L4.5,5L0,0H9z'/%3E%3C/svg%3E");
+$select-padding-right:                        30px !default;
+
+// checkbox / Radio button
+$input-cr-transition:                         all .15s ease-in-out !default;
+$input-cr-size:                               20px !default;
+$input-cr-bg:                                 $input-bg !default;
+$input-cr-bg-checked:                         darken($input-cr-bg, 20%) !default;
+$input-cr-border:                             $input-border !default;
+
+$input-cr-border:                             $input-border !default;
+$input-cr-border-width:                       1px !default;
+
+$input-check-radius:                          $border-radius-sm !default;
+$input-check-bg:                              url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath fill='%2368c600' d='M7.3,14.3L2,9l1.8-1.8l3.3,3.3l7.2-7.2l1.9,1.9L7.3,14.3z'/%3E%3C/svg%3E");
+
+// Switch
+$switch-bg:                                   $gray-lv-6 !default;
+$switch-bg-transition:                        all .3s ease-in-out !default;
+$switch-active-bg:                            $brand-primary !default;
+$switch-width:                                44px !default;
+$switch-height:                               24px !default;
+$switch-btn:                                  lighten($switch-bg, 60%) !default;
+$switch-active-btn:                           $gray-lv-1 !default;
+$switch-btn-size:                             20px !default;
+$switch-btn-transition:                       all .2s ease-in-out !default;
+
+// Top Search
+$ts-input-bg:                                 lighten($main-bg, 5%) !default;
+$ts-input-focus-bg:                           lighten($ts-input-bg, 5%) !default;
+
+// Star Rating
+$star-btn-size:                               28px !default;
+$star-icon-size:                              20px !default;
+$star-icon-padding-top:                       floor(($star-btn-size - $star-icon-size)*.5)!default;
+$star-color:                                  rgba($body-color, .5) !default;
+$star-checked-color:                          $yellow !default;
+
+// =================================================
+// Dropdowns
+// =================================================
+$dropdown-padding-x:                          15px !default;
+$dropdown-padding-y:                          $padding-base-vertical !default;
+
+$dropdown-bg:                                 #fff !default;
+$dropdown-color:                              $body-color-dark !default;
+$dropdown-link:                               $gray-lv-5 !default;
+$dropdown-link-hover:                         $gray-lv-9 !default;
+$dropdown-link-hover-bg:                      $gray-lv-1 !default;
+
+$dropdown-link-active:                        $dropdown-link !default;
+$dropdown-link-active-bg:                     $dropdown-bg !default;
+$dropdown-link-disabled-color:                $gray-lv-4 !default;
+
+$dropdown-header-color:                       $gray-lv-5 !default;
+$dropdown-caret-color:                        $gray-lv-2 !default;
+
+$dropdown-border:                             none !default;
+$dropdown-border-radius:                      $border-radius-sm !default;
+$dropdown-divider:                            1px solid darken($dropdown-bg, 7%) !default;
+$dropdown-shadow:                             0 3px 10px rgba($gray-lv-5, .5) !default;
+
+// =================================================
+// Tables
+// =================================================
+$table-cell-padding:                          12px !default;
+$table-condensed-cell-padding:                6px !default;
+
+$table-bg:                                    transparent !default;
+$table-bg-accent:                             rgba($gray-lv-7, .2) !default;
+$table-bg-hover:                              rgba($gray-lv-7, .6) !default;
+
+$table-status-color:                          $white !default;
+$table-bg-active:                             $table-bg-hover !default;
+$table-border-color:                          lighten($divider-color, 5%) !default;
+
+$table-head-color:                            lighten($body-color, 20%) !default;
+$table-jambo-head-bg:                         $gray-lv-7 !default;
+$table-jambo-head-color:                      $table-head-color !default;
+
+// =================================================
+// Pagination
+// =================================================
+$pagination-padding-vertical:                 5px !default;
+$pagination-padding-horizontal:               9px !default;
+
+$pagination-color:                            $link-color !default;
+$pagination-bg:                               $panel-bg !default;
+$pagination-border:                           lighten($pagination-bg, 8%) !default;
+
+$pagination-hover-color:                      $link-hover-color !default;
+$pagination-hover-bg:                         lighten($pagination-bg, 13%) !default;
+$pagination-hover-border:                     $pagination-hover-bg !default;
+
+$pagination-active-color:                     $white !default;
+$pagination-active-bg:                        $brand-second !default;
+$pagination-active-border:                    $brand-second !default;
+
+$pagination-disabled-color:                   $gray-lv-5 !default;
+$pagination-disabled-bg:                      $pagination-bg !default;
+$pagination-disabled-border:                  $pagination-border !default;
+
+// =================================================
+// Side Nav
+// =================================================
+$jumbotron-bg:                                lighten($panel-bg, 2.5%) !default;
+
+// =================================================
+// Side Nav
+// =================================================
+$aside-width:                                 240px !default;
+$aside-width-sm:                              70px !default;
+$aside-sm-width-child:                        180px !default;
+
+$aside-bg:                                    #252d59 !default;
+$aside-color:                                 lighten($aside-bg, 45%) !default;
+
+$aside-menu-link:                             lighten($aside-bg, 55%) !default;
+$aside-menu-link-size:                        .875rem !default;
+$aside-menu-link-weight:                      400 !default;
+$aside-menu-hover:                            $gray-lv-1 !default;
+$aside-menu-hover-bg:                         lighten($aside-bg, 5%) !default;
+$aside-menu-active-bg:                        lighten($aside-bg, 5%) !default;
+$aside-menu-active-border:                    3px solid $brand-primary !default;
+$aside-menu-current:                          $gray-lv-1;
+$aside-menu-current-bg:                       darken($aside-bg, 2%) !default;
+
+$aside-child-bg:                              darken($aside-bg, 5%) !default;
+$aside-child-link:                            $aside-menu-link !default;
+$aside-child-hover:                           $aside-menu-hover !default;
+$aside-child-hover-bg:                        lighten($aside-child-bg, 2%) !default;
+$aside-child-current-bg:                      darken($aside-child-bg, 2%) !default;
+$aside-child-dot:                             lighten($aside-menu-active-bg, 10%) !default;
+
+$aside-sm-child-bg:                           lighten($aside-menu-active-bg, 5%) !default;
+$aside-sm-child-hover-bg:                     lighten($aside-sm-child-bg, 2.5%) !default;
+$aside-sm-child-current-bg:                   lighten($aside-sm-child-bg, 5%) !default;
+
+$aside-footer-height:                         38px;
+$aside-footer-bg:                             darken($aside-bg, 5%) !default;
+$aside-footer-link:                           $aside-menu-link !default;
+$aside-footer-link-hover:                     $aside-menu-hover !default;
+$aside-footer-hover-bg:                       lighten($aside-footer-bg, 5%)  !default;
+
+$aside-profile-bg:                            #fff !default;
+$aside-profile-name-color:                    $gray-lv-2 !default;
+
+$aside-heading-size:                          1rem !default;
+$aside-heading-weight:                        400 !default;
+
+$aside-menu-active-border-width:              3px !default;
+$aside-menu-active-border-color:              $brand-primary !default;
+
+// =================================================
+// Header
+// =================================================
+$header-height:                               56px !default;
+
+$header-bg:                                   lighten($main-bg, 7%) !default;
+$header-nav-hover-bg:                         lighten($header-bg, 7%) !default;
+$header-nav-open-bg:                          lighten($header-bg, 12%) !default;
+
+// =================================================
+// Footer
+// =================================================
+$footer-bg:                                   $main-bg !default;
+$footer-color:                                $gray-lv-4 !default;
+
+// =================================================
+// Nav
+// =================================================
+$nav-hover-color:                             #fff;
+$nav-hover-bg:                                $gray-lv-7 !default;
+
+// =================================================
+// Modals
+// =================================================
+
+$modal-color:                                 $body-color-dark !default;
+$modal-link:                                  $gray-lv-5 !default;
+$modal-link-hover:                            $gray-lv-9 !default;
+
+$modal-inner-padding:                         15px !default;
+$modal-title-padding:                         10px 15px !default;
+$modal-title-line-height:                     $line-height-base !default;
+$modal-content-bg:                            #fff !default;
+$modal-content-border-color:                  rgba(0,0,0,.2) !default;
+//** Modal content border color **for IE8**
+$modal-content-fallback-border-color:         #999 !default;
+$modal-backdrop-bg:                           #000 !default;
+$modal-backdrop-opacity:                      .5 !default;
+$modal-header-border-color:                   $gray-lv-2 !default;
+$modal-footer-border-color:                   $modal-header-border-color !default;
+
+$modal-lg:                                    720px !default;
+$modal-md:                                    540px !default;
+$modal-sm:                                    300px !default;
+
+// =================================================
+// Messages list
+// Header user messages
+// =================================================
+
+
+$msg-bg:                                      transparent !default;
+$msg-li-bg:                                   lighten($panel-bg, 2.5%) !default;
+
+$dropdown-msg-bg:                             $gray-lv-2 !default;
+$dropdown-msg-li-bg:                          $gray-lv-1 !default;
+
+// =================================================
+// gallery
+// =================================================
+$thumbnail-bg:                                lighten($panel-bg, 8%) !default;
+
+// =================================================
+// Utilities
+// =================================================
+// * tile
+$tile-bg:                                     $panel-bg !default;
+$tile-border-radius:                          $border-radius-sm !default;
+$tile-padding:                                10px 15px !default;
+$tile-margin-bottom:                          20px !default;
+
+$tile-count-color:                            lighten($body-color, 30%) !default;
+$tile-count-weight:                           $font-weight-bold !default;
+
+// * Progress Bar
+$progress-bar-dark:                           $gray-lv-7 !default;
+$progress-bar-gray:                           $gray-lv-3 !default;
+
+// * Todo lis
+$todo-bg:                                     lighten($panel-bg, 2.5%) !default;
+$todo-bg-hover:                               lighten($panel-bg, 8%) !default;
+$todo-hover-color:                            #fff !default;
+
+// * Timeline
+$timeline-line:                               lighten($panel-bg, 8%) !default;
+$timeline-dot-bg:                             $white !default;
+$timeline-dot-border:                         lighten($timeline-line, 10%) !default;
+
+// * tag
+$timeline-tag-bg:                             $gray-lv-7 !default;
+$timeline-tag-color:                          #fff !default;
+$timeline-tag-width:                          84px !default;
+$timeline-tag-height:                         24px !default;
+$timeline-tag-top:                            -4px !default;
+
+// * Event
+$event-date-bg:                               $gray-lv-7;
+$event-date-color:                            $body-color;
+
+// * Inbox
+$mail-list-bg:                                lighten($panel-bg, 3%) !default;
+$mail-link-hover-bg:                          lighten($mail-list-bg, 2.5) !default;
+$mail-link-active-bg:                         lighten($mail-list-bg, 5) !default;
+$mail-sender-color:                           $white !default;
+$mail-snippet-color:                          $body-color !default;
+$mail-badge-color:                            $brand-second !default;
+$mail-attach-img-border:                      5px solid lighten($panel-bg,10%) !default;
+
+$compose-bg:                                  lighten($panel-bg, 3%) !default;
+$compose-border-color:                        lighten($compose-bg, 20%) !default;
+$compose-header-bg:                           $brand-second !default;
+
+// * Error Page
+$error-page-bg:                               $main-bg url('../images/bg_main.jpg') no-repeat center top !default;
+
+// * Login / Register page
+$login-page-bg:                               $main-bg url('../images/bg_main.jpg') no-repeat center top !default;
+$login-form-wrap-bg:                          rgba(#0a0b13, .6) !default;
+
+// =================================================
+// vendor - Bootstrap Progress
+// =================================================
+$bs-progress-bg:                              lighten($panel-bg, 8%) !default;
+$bs-progress-bar-bg:                          $brand-second !default;
+$bs-progress-height:                          1rem;
+$bs-progress-radius:                          2px !default;
+$bs-progress-radius-sm:                       5px !default;
+
+$bs-progress-success-bg:                      $brand-success !default;
+$bs-progress-info-bg:                         $brand-info !default;
+$bs-progress-warning-bg:                      $brand-warning !default;
+$bs-progress-danger-bg:                       $brand-danger !default;
+$bs-progress-gray-bg:                         $gray-lv-3 !default;
+$bs-progress-dark-bg:                         $gray-lv-6 !default;
+
+// =================================================
+// vendor - Bootstrap Wysiwyg
+// =================================================
+$bs-wysiwyg-btn-bg:                           transparent !default;
+$bs-wysiwyg-btn-info-bg:                      $btn-muted-bg !default;
+$bs-wysiwyg-btn-active-bg:                    rgba($btn-muted-bg,.5);
+
+// =================================================
+// vendor - Dropzone
+// =================================================
+$dp-preview-bg:                               $brand-second !default; //lighten($gray-lv-6, 8%) !default;
+$dp-preview-shadow:                           0 1px 3px rgba($gray-lv-9, .3) !default;
+$dp-preview-color:                            $white !default;
+$dp-preview-border-color:                     lighten($dp-preview-bg, 10%) !default;
+
+// =================================================
+// vendor - Full Calendar
+// =================================================
+$fc-table-border-color:                       $table-border-color !default;
+
+$fc-today-bg:                                 lighten($panel-bg, 5%) !default;
+
+$fc-list-heading-bg:                          lighten($panel-bg, 2%) !default;
+$fc-list-item-hover:                          $table-bg-hover !default;
+
+$fc-event-border-color:                       $brand-second !default;
+$fc-event-bg:                                 $panel-bg !default;
+$fc-event-dot-color:                          $brand-second !default;
+
+$fc-btn-default:                              $brand-second !default;
+$fc-btn-default-color:                        $white !default;
+$fc-highlight-bg:                             $brand-second !default;
+
+// =================================================
+// vendor - ion RangeSlider Skin
+// =================================================
+$irs-bg:                                      lighten($panel-bg, 8%) !default;
+$irs-bar-bg:                                  $brand-second !default;
+$irs-num-bg:                                  $brand-second !default;
+$irs-num-color:                               $white !default;
+$irs-slider-hover:                            lighten($irs-bar-bg, 60%) !default;
+$irs-shadow:                                  none !default;
+
+$irs-limit-bg:                                $irs-bg !default;
+$irs-limit-color:                             lighten($irs-bg,50%) !default;
+
+$irs-grid-line:                               lighten($irs-bg, 20%) !default;
+$irs-grid-color:                              lighten($irs-bg, 30%) !default;
+
+// =================================================
+// vendor - jqstooltip
+// =================================================
+$jqstooltip-bg:                               $gray-lv-6 !default;
+
+// =================================================
+// vendor - jQuery Smart Wizard
+// =================================================
+$sw-step-bg:                                  lighten($panel-bg, 8%) !default;
+$sw-step-color:                               $body-color-muted !default;
+$sw-step-size:                                32px !default;
+$sw-step-border-width:                        2px !default;
+$sw-step-font-size:                           1.125rem !default;
+$sw-step-surrent-bg:                          $brand-second !default;
+$sw-step-surrent-color:                       $white !default;
+$sw-step-done-bg:                             $brand-primary !default;
+$sw-step-done-color:                          $white !default;
+
+// =================================================
+// Dark 主題, 物件在白色底呈現時
+// =================================================
+$wb-link-color:                               $brand-second !default;
+$wb-link-hover-color:                         $wb-link-color !default;
+$wb-link-active-color:                        $wb-link-color !default;
+
+$wb-divider-color:                            rgba($divider-color, .1) !default;
+
+$wb-input-color:                              $body-color-dark !default;
+$wb-input-border:                             $gray-lv-3 !default;
+$wb-input-color-placeholder:                  lighten($body-color-dark, 40%) !default;
+
+$wb-input-focus-border:                       lighten($brand-second, 10%) !default;
+$wb-input-border-disabled:                    rgba($input-border, .25) !default;
+
+$wb-input-feedback-color:                     $body-color !default;
+$wb-legend-color:                             $body-color !default;
+$wb-legend-border-color:                      $wb-input-border !default;
+
+$wb-input-group-addon-color:                  $wb-input-color !default;
+$wb-input-group-addon-border-color:           $wb-input-border !default;
+
+$wb-select-arrow:                             url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 5'%3E%3Cpath fill='%2339415e' d='M9,0L4.5,5L0,0H9z'/%3E%3C/svg%3E");
+
+$wb-btn-muted-color:                          $gray-lv-4 !default;
+$wb-btn-muted-bg:                             $gray-lv-1 !default;
+$wb-btn-muted-border:                         $gray-lv-2 !default;

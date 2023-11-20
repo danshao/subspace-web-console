@@ -1,0 +1,315 @@
+/* =============================
+ * Utilities
+================================ */
+hr {
+    border-top   : $divider;
+    margin-top   : 15px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    background   : none !important;
+    border-bottom: $divider;
+    margin       : 10px 0;
+}
+
+.divider-dashed {
+    border-top: $divider-dashed;
+    background: transparent;
+    height    : 1px;
+    margin    : 15px 0;
+}
+
+.space{
+    height: 1rem;
+}
+.space-lg{
+    height: 2rem;
+}
+.space-sm{
+    height:.5rem;
+}
+
+/* Border color */
+.border-red {
+    border-color: $red !important;
+}
+
+.border-orange {
+    border-color: $orange !important;
+}
+
+.border-yellow {
+    border-color: $yellow !important;
+}
+
+.border-green {
+    border-color: $green !important;
+}
+
+.border-cyan {
+    border-color: $cyan !important;
+}
+
+.border-blue {
+    border-color: $blue !important;
+}
+
+.border-indigo {
+    border-color: $indigo !important;
+}
+
+.border-purple {
+    border-color: $purple !important;
+}
+
+.border-gray {
+    border-color: $gray !important;
+}
+/* --- Background Color --- */
+@mixin bg-variant($bg, $border, $color) {
+    background: $bg !important;
+    border    : $border !important;
+    color     : $color;
+}
+
+.bg-primary {
+    @include bg-variant($brand-primary, $brand-primary, #fff);
+}
+
+.bg-white {
+    @include bg-variant($white, $white, $body-color-dark);
+}
+
+.bg-red {
+    @include bg-variant($red, $red, #fff);
+}
+
+.bg-orange {
+    @include bg-variant($orange, $orange, #fff);
+}
+
+.bg-yellow {
+    @include bg-variant($yellow, $yellow, #fff);
+}
+
+.bg-lime {
+    @include bg-variant($lime, $lime, #fff);
+}
+
+.bg-green {
+    @include bg-variant($green, $green, #fff);
+}
+
+.bg-cyan {
+    @include bg-variant($cyan, $cyan, #fff);
+}
+
+.bg-blue {
+    @include bg-variant($blue, $blue, #fff);
+}
+
+.bg-indigo {
+    @include bg-variant($indigo, $indigo, #fff);
+}
+
+.bg-purple {
+    @include bg-variant($purple, $purple, #fff);
+}
+
+.bg-gray {
+    @include bg-variant($gray, $gray, #fff);
+}
+
+.page-header {
+    border-bottom-color: $divider-color;
+    margin             : 1rem 0;
+}
+
+/* Helper classes */
+.clearfix:after,
+form:after {
+    //@include clearfix;
+    display: block;
+    content: '';
+    clear  : both;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.d-block {
+    display: block !important;
+    width  : 100%;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+/* etc... */
+.center-margin {
+    margin: 0 auto;
+    float : none!important;
+}
+
+.page-title {
+    width  : 100%;
+    height : 65px;
+    padding: 10px 0 10px 15px;
+
+    .title_left {
+        width  : 45%;
+        float  : left;
+        display: block;
+
+        h3 {
+            margin: 9px 0;
+        }
+    }
+
+    .title_right {
+        width  : 55%;
+        float  : left;
+        display: block;
+
+        .pull-right {
+            margin: 10px 0;
+        }
+    }
+
+    > .fa,
+    > .ion,
+    > .glyphicon{
+        font-size: inherit;
+    }
+
+    //== clearfix
+    &::after{
+        display: block;
+        content: '';
+        clear  : both;
+    }
+}
+
+.close{
+    text-shadow: none;
+    opacity: .5;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+table.no-margin .progress {
+    margin-bottom: 0;
+}
+
+.jqstooltip {
+    background     : $jqstooltip-bg !important;
+    width          : 30px !important;
+    height         : 22px !important;
+    text-decoration: none;
+}
+
+.tooltip {
+    display: block !important;
+}
+
+.jumbotron {
+    background: $jumbotron-bg;
+}
+
+.well {
+    border       : $well-border;
+    background   : $well-bg;
+    border-radius: $well-border-radius;
+    padding      : $well-padding;
+    box-shadow: none;
+
+    &.well-sm{
+        padding      : $well-padding-sm;
+    }
+}
+
+img.avatar {
+    height               : 32px;
+    width                : 32px;
+    float                : left;
+    display              : inline-block;
+    border-radius        : 50%;
+    padding              : 1px;
+    background           : #fff;
+    //border               : 1px solid #e6e6e6;
+}
+
+ul.messages {
+    padding   : 0;
+    list-style: none;
+    > li {
+
+        padding      : 15px 0;
+        & + li{
+            border-top: 1px solid $divider-color;
+        }
+    }
+    .avatar{
+        @include size(48px);
+    }
+    .date-box {
+        float     : right;
+        margin-top:1.5rem;
+    }
+    .url{
+        margin:0;
+    }
+    .message-wrapper {
+        margin-left : 64px;
+        margin-right: 80px;
+
+        .heading {
+            font-weight  : 600;
+            margin       : 0;
+            cursor       : pointer;
+            margin-bottom: 10px;
+            line-height  : 100%;
+        }
+        blockquote.message{
+            margin-bottom: 10px;
+            padding:0 10px;
+            border-left-width: 2px;
+        }
+    }
+}
+
+.info-table {
+    list-style: none;
+    display   : block;
+    margin    : 0;
+    padding   : 0;
+    display   : table;
+
+    > li {
+        display: table-row;
+        .col {
+            display    : table-cell;
+            padding-top: 0.25em;
+            &.label {
+                color      : inherit;
+                text-align : left;
+                padding    : 0 0.5em 0 0;
+                font-weight: $font-weight-bold;
+                font-size: inherit;
+                > i{
+                    font-size: inherit;
+                    min-width:auto;
+                    height: auto;
+                }
+            }
+            &.cont {}
+        }
+    }
+}
